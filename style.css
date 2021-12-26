@@ -1,0 +1,370 @@
+HTML, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root{
+    --navbar-bg-color: #343434;
+    --nav-li-hover-background: tomato;
+    --nav-li-hover-text: whitesmoke;
+    --span-border-color: white;
+    --welcome-bg-color: #FFEFD5;
+    --welcome-text-color: black;
+    --project-bg-color: aliceblue;
+    --about-bg-color: #F5F5DC;
+    --contact-bg-color: #FFEFD5;
+}
+
+.light{
+    --navbar-bg-color: #343434;
+    --nav-li-hover-background: tomato;
+    --nav-li-hover-text: whitesmoke;
+    --span-border-color: white;
+    --welcome-bg-color: #FFEFD5;
+    --welcome-text-color: black;
+    --project-bg-color: aliceblue;
+    --about-bg-color: #F5F5DC;
+    --contact-bg-color: #FFEFD5;
+    transition: 2s;
+}
+
+.dark{
+    --navbar-bg-color: #000000;
+    --nav-li-hover-background: tomato;
+    --nav-li-hover-text: whitesmoke;
+    --span-border-color: white;
+    --welcome-bg-color: #282828;
+    --welcome-text-color: #DCDCDC;
+    --project-bg-color: #696969;
+    --about-heading-bg: #343434;
+    --about-heading-txtcolor: #DCDCDC;
+    --about-bg-color: #181818;
+    --about-text-color: #DCDCDC;
+    --contact-bg-color: #383838;
+    --contact-text-color: #D3D3D3;
+    --footer-bg-color: #080808;
+    --footer-text-color: #D3D3D3;
+    transition: 2s;
+}
+
+
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Welcome Page */
+#welcome{
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--welcome-bg-color);
+    color: var(--welcome-text-color);
+}
+
+#wrapper{
+    display: flex;
+    align-items: center;
+}
+
+#wrapper #intro{
+    opacity: 0;
+    animation: appear 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes appear {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+#wrapper span{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 2000;
+}
+
+#developer{
+    font-size: 20px;
+    display: block;
+    color: orange;
+    opacity: 0;
+    animation: grow 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes grow {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    position: -webkit-sticky;
+    display: block;
+    width: 100%;
+    top: 0px;
+    color: tomato;
+    font-weight: bold;
+    opacity: 0.94;
+    visibility: visible;
+}
+
+#navbar #main-nav{
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 25px 25px;
+}
+
+.nav-items{
+    padding: 30px 50px;
+    text-decoration: none;
+    color: tomato;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.nav-items:hover{
+    background-color: var(--nav-li-hover-background);
+    color: var(--nav-li-hover-text);
+}
+
+#dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dropdown input{
+    opacity: 0;
+}
+
+#dropdown span{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 3px;
+    display: block;
+    border: 1px solid var(--span-border-color);
+}
+
+#dropdown #light-selector{
+    background-color: green;
+}
+
+/*code not working
+
+label:hover ~ span{
+    background-color: blueviolet;
+} 
+
+*/
+
+
+/* Projects Page */
+
+#project-page{
+    width: 100%;
+    background-color: var(--project-bg-color);
+}
+
+#project-page h2{
+    text-align: center;
+    margin: 0;
+}
+
+#project-list{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.35fr));
+    grid-gap: 4rem;
+    margin: 0;
+    padding: 50px;
+}
+
+.projects{
+    text-decoration: none;
+}
+
+.projects img{
+    align-items: center;
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.projects p{
+    text-align: center;
+    color: black;
+}
+
+img:hover{
+    width: 100%;
+    height: 100%;
+}
+
+/* About section */
+
+#about{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15vw;
+    background-color: var(--about-bg-color);
+    color: var(--about-text-color);
+}
+
+#about-section h2{
+    margin: 0;
+    padding: 25px;
+    background-color: var(--about-heading-bg);
+    color: var(--about-heading-txtcolor);
+}
+
+#about-section{
+    text-align: center;
+}
+
+/* Contact section */
+#contact{
+    padding: 5px;
+    text-align: center;
+    background-color: var(--contact-bg-color);
+    color: var(--contact-text-color);
+}
+
+#all-contacts{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 36px;
+    height: 58vh;
+    align-items: center;
+}
+
+#all-contacts a{
+    padding: 50px;
+}
+
+.fa-phone{
+    color: blue;
+}
+
+.fa-envelope{
+    color: #DB4437;
+}
+
+.fa-instagram{
+    color: #8a3ab9;
+}
+
+.fa-github{
+    color: #4078c0;
+}
+
+/* Footer Section*/
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2vw;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+/* Compatibility for mobile */
+@media only screen and (max-width: 980px) {
+    #welcome{
+        height: 100vh;
+    }
+
+    
+    #navbar #main-nav{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .nav-items{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #dropdown{
+        align-items: flex-end;
+        margin-right: 20vw;
+        padding: 10px;
+    }
+    
+    #navbar{
+        position: fixed;
+        top: 0px;
+        visibility: hidden;
+    }
+    
+    #hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35px;
+        position: fixed;
+        top: 10px;
+        right: 25px;
+        float: right;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    #hamburger span{
+        height: 2px;
+        width: 30px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20%;
+    }
+
+    #hamburger:hover{
+        cursor: pointer;
+    }
+
+    #about{
+        height: 85vh;
+    }
+
+    #contact{
+        height: 89vh;
+    }
+
+}
