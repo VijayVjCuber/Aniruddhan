@@ -56,12 +56,20 @@ darktheme.onclick = () => {
 
 //Hamburger
 hamburger.onclick = () =>{
-    if(navbar.style.visibility==="hidden"){
-        navbar.style.visibility="visible";
+    // if(navbar.style.visibility==="hidden"){
+    //     navbar.style.visibility="visible";
+    // }
+    // else{
+    //     navbar.style.visibility="hidden";
+    //     dropdown.style.visibility="hidden";
+    // }
+    if(navbar.classList.contains("navbar-hidden")){
+        navbar.classList.remove("navbar-hidden");
+        navbar.classList.add("navbar-visible");
     }
     else{
-        navbar.style.visibility="hidden";
-        dropdown.style.visibility="hidden";
+        navbar.classList.remove("navbar-visible");
+        navbar.classList.add("navbar-hidden");
     }
     hamburger.classList.toggle("cross");
 }

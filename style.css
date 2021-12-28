@@ -20,7 +20,7 @@ HTML, body{
     --nav-li-hover-background: tomato;
     --nav-li-hover-text: whitesmoke;
     --span-border-color: white;
-    --welcome-bg-color: #FFEFD5;
+    --welcome-bg-color: aliceblue
     --welcome-text-color: black;
     --project-bg-color: aliceblue;
     --about-bg-color: #F5F5DC;
@@ -32,7 +32,7 @@ HTML, body{
     --nav-li-hover-background: tomato;
     --nav-li-hover-text: whitesmoke;
     --span-border-color: white;
-    --welcome-bg-color: #FFEFD5;
+    --welcome-bg-color: aliceblue;
     --welcome-text-color: black;
     --project-bg-color: aliceblue;
     --about-bg-color: #F5F5DC;
@@ -195,13 +195,13 @@ label:hover ~ span{
 
 #project-page{
     width: 100%;
-    height: 100%;
     background-color: var(--project-bg-color);
 }
 
 #project-page h2{
     text-align: center;
     margin: 0;
+    padding: 25px;
 }
 
 #project-list{
@@ -215,10 +215,6 @@ label:hover ~ span{
 
 .projects{
     text-decoration: none;
-    max-width: 300px;
-    max-height: 350px;
-    overflow: hidden;
-    object-fit: contain;
 }
 
 .projects img{
@@ -315,7 +311,6 @@ footer{
     #welcome{
         height: 100vh;
     }
-
     
     #navbar #main-nav{
         flex-direction: column;
@@ -336,7 +331,14 @@ footer{
     #navbar{
         position: fixed;
         top: 0px;
-        visibility: hidden;
+    }
+
+    .navbar-hidden{
+        display: none !important;
+    }
+
+    .navbar-visible{
+        display: block !important;
     }
     
     #hamburger{
