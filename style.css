@@ -21,9 +21,9 @@ HTML, body{
     --nav-li-hover-background: tomato;
     --nav-li-hover-text: whitesmoke;
     --span-border-color: white;
-    --welcome-bg-color: aliceblue
+    --welcome-bg-color: aliceblue;
     --welcome-text-color: black;
-    --project-bg-color: aliceblue;
+    --project-bg-color: darkgray;
     --about-bg-color: #F5F5DC;
     --contact-bg-color: #FFEFD5;
 }
@@ -35,7 +35,7 @@ HTML, body{
     --span-border-color: white;
     --welcome-bg-color: aliceblue;
     --welcome-text-color: black;
-    --project-bg-color: aliceblue;
+    --project-bg-color: darkgray;
     --about-bg-color: #F5F5DC;
     --contact-bg-color: #FFEFD5;
     transition: 2s;
@@ -275,6 +275,7 @@ img:hover{
     font-size: 36px;
     height: 58vh;
     align-items: center;
+    padding: 0;
 }
 
 
