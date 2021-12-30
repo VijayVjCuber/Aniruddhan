@@ -13,6 +13,7 @@ HTML, body{
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root{
