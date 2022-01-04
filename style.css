@@ -232,7 +232,7 @@ label:hover ~ span{
     color: black;
 }
 
-img:hover{
+.projects img:hover{
     width: 100%;
     height: 100%;
 }
@@ -240,7 +240,6 @@ img:hover{
 /* About section */
 
 #about{
-    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -259,7 +258,52 @@ img:hover{
 
 #about-section{
     text-align: center;
+    height: 100%;
 }
+
+#about-section p{
+    padding: 0vw 5vw;
+}
+
+#wrappergrid{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "sidebar content2"
+    "bottom bottom";
+}
+
+#wrappergrid div{
+    max-height: 400px;
+    max-width: 600px;
+}
+
+#wrappergrid img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-area: sidebar;
+}
+
+.grid-item-3{
+    grid-area: content;
+}
+
+.grid-item-4{
+    grid-area: bottom;
+}
+
 
 /* Contact section */
 #contact{
@@ -367,11 +411,12 @@ footer{
     }
 
     #about{
-        height: 85vh;
+        height: 100%;
     }
 
     #contact{
-        height: 89vh;
+        height: 95vh;
+        margin: 0;
     }
 
     footer{

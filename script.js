@@ -12,15 +12,15 @@ const projectscreen = document.getElementById("project-page");
 const aboutscreen = document.getElementById("about-section");
 const contactscreen = document.getElementById("contact");
 
-const welcomenav = document.getElementById("welcome-nav");
+const aboutnav = document.getElementById("about-nav");
 const projectnav = document.getElementById("project-nav");
 const contactnav = document.getElementById("contact-nav");
 
 const body = document.body;
 
 // Navigating the view
-welcomenav.onclick = () => {
-    welcomescreen.scrollIntoView();
+aboutnav.onclick = () => {
+    aboutscreen.scrollIntoView();
 }
 
 projectnav.onclick = () => {
