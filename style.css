@@ -183,16 +183,6 @@ p{
     background-color: green;
 }
 
-/*code not working
-
-label:hover ~ span{
-    background-color: blueviolet;
-} 
-
-*/
-
-
-/* Projects Page */
 
 #project-page{
     width: 100%;
@@ -394,8 +384,8 @@ footer{
         top: 10px;
         right: 25px;
         float: right;
-        box-sizing: border-box;
         z-index: 1;
+        padding: 8px;
     }
 
     #hamburger span{
@@ -408,6 +398,29 @@ footer{
 
     #hamburger:hover{
         cursor: pointer;
+    }
+
+    .cross{
+        justify-content: unset !important;
+    }
+
+    .cross .lines{
+        position: absolute;
+        right: 9px;
+        top: 22px;
+        transition: transform 400ms;
+    }
+
+    .cross .lines:nth-child(1){
+        transform: rotate(45deg);
+    }
+    
+    .cross .lines:nth-child(3){
+        transform: rotate(135deg);
+    }
+    
+    .cross .lines:nth-child(2){
+        display: none;
     }
 
     #about{
