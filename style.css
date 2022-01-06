@@ -379,7 +379,8 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 35px;
+        height: 30px;
+        width: 35px;
         position: fixed;
         top: 10px;
         right: 25px;
@@ -406,7 +407,7 @@ footer{
 
     .cross .lines{
         position: absolute;
-        right: 9px;
+        right: 12px;
         top: 22px;
         transition: transform 400ms;
     }
